@@ -3,26 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Desk Smith</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="site-header">
-        <h1>Hello, this is my personal website!</h1>
-        <nav>
+    <header class="nav-layout">
+        <aside class="nav-sidebar"></aside>
+        <nav class="navbar">
+          <strong><a href="index.html" id="site-header">Desk Smith</a></strong>
           <ul>
-            <li><a href="index.html">Homepage</a></li>
+            <li><a href="index.html" aria-current="page">Homepage</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="fun/index.html">Fun Stuff</a></li>
             <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><button id="theme-button">◐</button></li>
           </ul>
         </nav>
+        <aside class="nav-sidebar"></aside>
+
     </header>
 
-    <main>
+    <div class="layout">
+    <aside class="sidebar"></aside>
+    <main class="content">
         <section>
             <h2>Welcome to My Website</h2>
-            <p>This is a simple personal website.</p>
+            <p>This is a <span class="code">simple</span> personal website.</p>
         </section>
+
+        <h1 id="greeting">Hello</h1>
+        <button onclick="sayHello()">Click me</button>
+        <p id="counter">You have clicked 0 times</p>
+        <script>
+            console.log("脚本开始运行");
+        
+            const name = "Visitor";
+            let count = 0;
+        
+            function sayHello() {
+            count = count + 1;
+        
+            if (count === 1) {
+                document.getElementById("greeting").textContent = "Hello, " + name + "!";
+            } else if (count >= 5) {
+                document.getElementById("greeting").textContent = "That's enough, stop clicking!";
+            }
+        
+            document.getElementById("counter").textContent = "You have clicked " + count + " times";
+            console.log("count =", count);
+            }
+        </script>
 
         <section>
             <h2>Table Example</h2>
@@ -42,7 +72,7 @@
             </table>
         </section>
 
-        <Section>
+        <section>
             <h2>List Example</h2>
             <ol>
                 <li>Item 1</li>
@@ -55,12 +85,15 @@
             <p>This is the <span class="tag">content of my first note.</span></p>
         </article>
     </main>
+    <aside class="sidebar"></aside>
+
+    </div>
     
     <footer>
     <p><a href="mailto:mr.shuhaoxie@gmail.com">Contact me through mail</a></p>
     <p><a href="https://github.com/Desk-Smith" target="_blank" rel="noopener">Follow me on GitHub</a></p>
-    <img src="images/hpmc.png" alt="hpmc" width="300" height="300">
-    <p>© 2026 Desk Smith</p>
+    <p>© <span id="current-year">2026</span> Desk Smith</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

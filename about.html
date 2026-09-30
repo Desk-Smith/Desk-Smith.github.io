@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desk Smith</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="site-header">
-        <h1>Hello, this is my personal website!</h1>
-        <nav>
+    <header class="nav-layout">
+        <aside class="nav-sidebar"></aside>
+        <nav class="navbar">
+          <strong><a href="index.html" id="site-header">Desk Smith</a></strong>
           <ul>
             <li><a href="index.html">Homepage</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="fun/index.html">Fun Stuff</a></li>
+            <li><a href="about.html" aria-current="page">About Me</a></li>
+            <li><button id="theme-button">◐</button></li>
           </ul>
         </nav>
-      </header>
+        <aside class="nav-sidebar"></aside>
+
+    </header>
+
+    <div class="layout">
+    <aside class="sidebar"></aside>
+    <main class="content">
+        <h2>Testing</h2>
+        <p>This is a test page for the website.</p>
+    </main>
+    <aside class="sidebar"></aside>
+
+    </div>
+    
+    <footer>
+    <p><a href="mailto:mr.shuhaoxie@gmail.com">Contact me through mail</a></p>
+    <p><a href="https://github.com/Desk-Smith" target="_blank" rel="noopener">Follow me on GitHub</a></p>
+    <p>© <span id="current-year">2026</span> Desk Smith</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
